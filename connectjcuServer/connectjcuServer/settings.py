@@ -84,11 +84,11 @@ WSGI_APPLICATION = "connectjcuServer.wsgi.application"
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'connectjcuDB',
-        'USER': 'avnadmin',
-        'PASSWORD': 'AVNS_bZZ2XAbxxPyN1wWFr0q',
-        'HOST': 'connectjcu-db-arkar1022-d06f.a.aivencloud.com',
-        'PORT': '12662',
+        'NAME': config('DB_NAME'),
+        'USER': config('DB_USER'),
+        'PASSWORD': config('DB_PASSWORD'),
+        'HOST': config('DB_HOST'),
+        'PORT': config('DB_PORT'),
     }
 }
 
