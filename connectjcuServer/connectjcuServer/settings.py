@@ -37,13 +37,17 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "rest_framework",
+    "accounts",
     "api",
+    "corsheaders",
 ]
 
-MIDDLEWARE = [
+MIDDLEWARE = [ 
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
+    "corsheaders.middleware.CorsMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
@@ -51,6 +55,11 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = "connectjcuServer.urls"
+CORS_URLS_REGEX = r"^/api/.*" 
+CORS_ALLOWED_ORIGINS = [
+    'http://localhost:3000',
+    'https://localhost:3000',
+]
 
 TEMPLATES = [
     {
@@ -92,7 +101,7 @@ DATABASES = {
     }
 }
 
-
+AUTH_USER_MODEL= "accounts.User"
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
@@ -134,8 +143,8 @@ STATIC_ROOT=os.path.join(BASE_DIR,'connectjcuServer','static')
 #     os.path.join(BASE_DIR,'connectjcuServer', "static"),
 # ]
 
-# MEDIA_URL = '/media/'
-# MEDIA_ROOT=os.path.join(BASE_DIR,'connectjcuServer','media')
+MEDIA_URL = '/media/'
+MEDIA_ROOT=os.path.join(BASE_DIR,'connectjcuServer','media')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
