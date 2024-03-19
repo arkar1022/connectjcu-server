@@ -24,5 +24,6 @@ from connectjcuServer.views import home
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("", home, name="home"),
-    path('api/',include('api.urls'))
+    path('api/',include('api.urls')),
+    path('api/v1/auth/', include('accounts.urls'))
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
