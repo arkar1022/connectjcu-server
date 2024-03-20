@@ -21,7 +21,7 @@ class RegisterUserView(GenericAPIView):
         if serializer.is_valid(raise_exception=True):
             serializer.save()
             user = serializer.data
-            send_code_to_user(user["email"])
+            send_code_to_user(user['email'])
             return Response(
                 {
                     "data": user,

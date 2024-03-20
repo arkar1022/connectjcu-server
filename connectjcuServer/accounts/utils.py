@@ -2,6 +2,10 @@ import random
 from django.core.mail import EmailMessage
 from .models import User, OneTimePassword
 from django.conf import settings
+from django.core.mail import send_mail
+from django.conf import settings
+from django.utils.html import format_html
+
 def generateOtp():
     otp=""
     for i in range(6):
@@ -11,16 +15,24 @@ def generateOtp():
 def send_code_to_user(email):
     Subject = "One time Passocde for Email Verification"
     otp_code = generateOtp()
+    verification_url = f"https://connectjcu-client.vercel.app/email-verification/{otp_code}"
     print(otp_code)
     user = User.objects.get(email=email)
-    current_site="myAuth.com"
-    email_body=f"Hi {user.first_name} thanks fro signing up on {current_site}, Your OTP is {otp_code}"
+    email_body = format_html(
+        "<p>Hi {0},</p>"
+        "<p>Thanks for joining our connectJCU Platform.</p>"
+        "<p>Click the verfication link below: </p>"
+        "<p><a href='{1}'>{1}</a></p>",
+        user.first_name,
+        verification_url
+    )
     from_email = settings.DEFAULT_FROM_EMAIL
 
     OneTimePassword.objects.create(user=user, code=otp_code)
+    send_mail(subject=Subject,message='',html_message=email_body,from_email=from_email,recipient_list=[email],fail_silently=False)
 
-    send_email = EmailMessage(subject=Subject, body=email_body, from_email=from_email, to=[email] )
-    send_email.send(fail_silently=True)
+    # sd_email = EmailMessage(subject=Subject, body=email_body, from_email=from_email, to=[email] )
+    # sd_email.send(fail_silently=True)
 
 
 def send_normal_email(data):
