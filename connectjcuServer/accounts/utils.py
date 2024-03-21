@@ -15,7 +15,7 @@ def generateOtp():
 def send_code_to_user(email):
     Subject = "Email Verification"
     otp_code = generateOtp()
-    verification_url = f"https://connectjcu-client.vercel.app/email-verification/{otp_code}"
+    verification_url = f"https://www.connectjcu.org/email-verification/{otp_code}"
     print(otp_code)
     user = User.objects.get(email=email)
     email_body = format_html(
