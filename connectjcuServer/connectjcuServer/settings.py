@@ -174,7 +174,7 @@ SIMPLE_JWT = {
 
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = 'connectjcuteam@gmail.com'
-EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
+EMAIL_HOST_PASSWORD = config('EMAIL_PASSWORD')
 EMAIL_PORT = 587
 EMAIL_USE_TLS=True
 DEFAULT_FROM_EMAIL='connectjcuteam@gmail.com'
