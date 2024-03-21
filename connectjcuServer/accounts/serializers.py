@@ -58,9 +58,9 @@ class LoginSerializer(serializers.ModelSerializer):
         request = self.context.get('request')
         user = authenticate(request, email=email, password=password)
         if not user:
-            raise AuthenticationFailed("Invalid Credentials try again")
+            raise AuthenticationFailed("Invalid Username or Password")
         if not user.is_verified:
-            raise AuthenticationFailed("Email is not verified")
+            raise AuthenticationFailed("Email has not been verified")
         user_tokens  = user.tokens()
         return {
             'email':user.email,
