@@ -9,7 +9,7 @@ services:
       - static_vol:/app/connectjcuServer/static
       - media_vol:/app/connectjcuServer/media
     ports:
-      - "8000:8000"
+      - "80:80"
 
   nginx:
     build: ./nginx
