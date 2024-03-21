@@ -26,7 +26,7 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = os.environ.get("DEBUG", "FALSE").lower() == "true"
 DEBUG = config('DEBUG', default=False, cast=bool)
-ALLOWED_HOSTS = ['0.0.0.0','localhost','45.32.108.232','https://connectjcu-client.vercel.app']
+ALLOWED_HOSTS = ['0.0.0.0','localhost','45.32.108.232','api.connectjcu.space']
 
 
 # Application definition
