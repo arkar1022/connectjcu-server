@@ -19,10 +19,13 @@ def send_code_to_user(email):
     print(otp_code)
     user = User.objects.get(email=email)
     email_body = format_html(
-        "<p>Hi {0},</p>"
-        "<p>Thanks for joining our connectJCU Platform.</p>"
-        "<p>Click the verfication link below: </p>"
-        "<p><a href='{1}'>{1}</a></p>",
+    "<p>Dear {0},</p>"
+        "<p>Thank you for registering on the ConnectJCU Platform.</p>"
+        "<p>To complete your registration, please verify your email address by clicking the link below:</p>"
+        "<p><a href='{1}'>{1}</a></p><br>"
+        "<p>If you did not create an account on ConnectJCU, you can ignore this email.</p>"
+        "<p>Best regards,</p>"
+        "<p>The ConnectJCU Team</p>",
         user.first_name,
         verification_url
     )
