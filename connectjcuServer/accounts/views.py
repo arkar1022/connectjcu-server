@@ -1,6 +1,6 @@
 from django.shortcuts import render
-from rest_framework.generics import GenericAPIView
-from .serializers import UserRegisterSerializer, LoginSerializer, PasswordResetRequestSerializer, SetNewPasswordSerializer, LogoutSerializer
+from rest_framework.generics import GenericAPIView, UpdateAPIView
+from .serializers import UserRegisterSerializer, LoginSerializer, UserProfileImageSerializer, PasswordResetRequestSerializer, SetNewPasswordSerializer, LogoutSerializer
 from rest_framework.response import Response
 from rest_framework import status
 from .utils import send_code_to_user
@@ -10,6 +10,15 @@ from django.utils.http import urlsafe_base64_decode
 from django.utils.encoding import smart_str, DjangoUnicodeDecodeError
 from django.contrib.auth.tokens import PasswordResetTokenGenerator
 # Create your views here.
+
+
+
+class UserProfileImageView(UpdateAPIView):
+    serializer_class = UserProfileImageSerializer
+    permission_classes = [IsAuthenticated]
+
+    def get_object(self):
+        return self.request.user
 
 
 class RegisterUserView(GenericAPIView):

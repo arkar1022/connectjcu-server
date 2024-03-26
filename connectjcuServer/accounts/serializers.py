@@ -10,6 +10,16 @@ from django.urls import reverse
 from .utils import send_normal_email
 from rest_framework_simplejwt.tokens import RefreshToken, TokenError
 
+class UserProfileImageSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        fields = ['profile_image']
+
+    def update(self, instance, validated_data):
+        instance.profile_image = validated_data.get('profile_image', instance.profile_image)
+        instance.save()
+        return instance
+
 class UserRegisterSerializer(serializers.ModelSerializer):
     password = serializers.CharField(max_length=68, min_length=6, write_only=True)
     
