@@ -9,7 +9,7 @@ services:
       - static_vol_django:/app/connectjcuServer/static
       - media_vol_django:/app/connectjcuServer/media
     ports:
-      - 8000:8000
+      - 443:443
 
   nginx:
     build: ./nginx
