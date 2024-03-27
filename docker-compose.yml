@@ -6,20 +6,23 @@ services:
     env_file:
       - .env
     volumes:
-      - static_vol:/app/connectjcuServer/static
-      - media_vol:/app/connectjcuServer/media
+      - static_vol_django:/app/connectjcuServer/static
+      - media_vol_django:/app/connectjcuServer/media
     ports:
       - "8000:8000"
 
   nginx:
     build: ./nginx
     volumes:
-      - static_vol:/app/connectjcuServer/static
-      - media_vol:/app/connectjcuServer/media
+      - static_vol_nginx:/app/connectjcuServer/static
+      - media_vol_nginx:/app/connectjcuServer/media
     ports:
-      -  "80:80"
+      - "80:80"
     depends_on:
       - django_app
+
 volumes:
-  static_vol:
-  media_vol:
+  static_vol_django:
+  media_vol_django:
+  static_vol_nginx:
+  media_vol_nginx:
