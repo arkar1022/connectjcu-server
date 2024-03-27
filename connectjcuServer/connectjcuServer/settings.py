@@ -39,12 +39,13 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "corsheaders",
     "rest_framework",
     "accounts",
     "api",
     "blogs",
     "categories",
-    "corsheaders",
+  
 ]
 
 MIDDLEWARE = [ 
@@ -67,7 +68,7 @@ CORS_ALLOWED_ORIGINS = [
     'http://localhost:3000',
     'https://localhost:3000',
     'https://www.connectjcu.club',
-    'https://connectjcu.club',
+    'https://connectjcu.club'
 ]
 
 CSRF_TRUSTED_ORIGINS = [
@@ -77,7 +78,7 @@ CSRF_TRUSTED_ORIGINS = [
     'http://localhost:3000',
     'https://localhost:3000',
     'https://www.connectjcu.club',
-    'https://connectjcu.club',
+    'https://connectjcu.club'
 ]
 
 TEMPLATES = [
