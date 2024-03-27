@@ -66,6 +66,8 @@ CORS_ALLOWED_ORIGINS = [
     'https://www.connectjcu.org',
     'http://localhost:3000',
     'https://localhost:3000',
+    'https://www.connectjcu.club',
+    'https://connectjcu.club',
 ]
 
 CSRF_TRUSTED_ORIGINS = [
@@ -74,6 +76,8 @@ CSRF_TRUSTED_ORIGINS = [
     'https://www.connectjcu.org',
     'http://localhost:3000',
     'https://localhost:3000',
+    'https://www.connectjcu.club',
+    'https://connectjcu.club',
 ]
 
 TEMPLATES = [
