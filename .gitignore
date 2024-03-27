@@ -6,6 +6,8 @@ __pycache__/
 # C extensions
 *.so
 
+
+
 # Distribution / packaging
 .Python
 build/
@@ -146,6 +148,8 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
+./nginx/cert_chain.cert.crt
+./nginx/server.key
 # pytype static type analyzer
 .pytype/
 
