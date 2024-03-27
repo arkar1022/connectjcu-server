@@ -19,6 +19,13 @@ class UserProfileImageSerializer(serializers.ModelSerializer):
         instance.profile_image = validated_data.get('profile_image', instance.profile_image)
         instance.save()
         return instance
+    
+
+class UserProfileSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        fields = ['id','first_name','last_name', 'profile_image', 'email', 'date_joined']
+
 
 class UserRegisterSerializer(serializers.ModelSerializer):
     password = serializers.CharField(max_length=68, min_length=6, write_only=True)
@@ -49,6 +56,7 @@ class LoginSerializer(serializers.ModelSerializer):
     email = serializers.EmailField(max_length=255, min_length=5)
     password = serializers.CharField(max_length=68, write_only=True)
     full_name = serializers.CharField(max_length=255, read_only=True)
+    first_name = serializers.CharField(max_length=255, read_only=True)
     access_token = serializers.CharField(max_length=255, read_only=True)
     refresh_token = serializers.CharField(max_length=255, read_only=True)
 
@@ -56,8 +64,10 @@ class LoginSerializer(serializers.ModelSerializer):
         model=User
         fields=[
             'email',
+            'first_name',
             'full_name',
             'password',
+            'profile_image',
             'access_token',
             'refresh_token'
         ]
@@ -74,7 +84,9 @@ class LoginSerializer(serializers.ModelSerializer):
         user_tokens  = user.tokens()
         return {
             'email':user.email,
+            'first_name': user.first_name,
             'full_name': user.get_full_name,
+            'profile_image': user.profile_image,
             'access_token': user_tokens.get('access'),
             'refresh_token': user_tokens.get('refresh'),
         }

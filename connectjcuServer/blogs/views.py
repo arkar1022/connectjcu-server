@@ -2,6 +2,7 @@ from rest_framework import generics,mixins
 from django.db.models import F
 from rest_framework.permissions import IsAuthenticated
 from .models import Blog
+from categories.models import Category
 from .serializers import BlogSerializer
 
 class BlogMixinListView(mixins.CreateModelMixin,mixins.ListModelMixin, generics.GenericAPIView):
@@ -29,6 +30,15 @@ class BlogMixinListView(mixins.CreateModelMixin,mixins.ListModelMixin, generics.
         return self.list(request, *args, **kwargs)
     
     def post(self, request, *args, **kwargs):
+        data = request.data
+        category_id = data.get('category', None)
+        if category_id:
+            category = Category.objects.filter(id=category_id).first()
+            if category:
+                data['category'] = category.id
+            else:
+                del data['category']  # Remove category if not found
+
         return self.create(request, *args, **kwargs)
 
 

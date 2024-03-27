@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     "accounts",
     "api",
     "blogs",
+    "categories",
     "corsheaders",
 ]
 

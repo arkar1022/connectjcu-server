@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from rest_framework.generics import GenericAPIView, UpdateAPIView
-from .serializers import UserRegisterSerializer, LoginSerializer, UserProfileImageSerializer, PasswordResetRequestSerializer, SetNewPasswordSerializer, LogoutSerializer
+from .serializers import UserRegisterSerializer, UserProfileSerializer, LoginSerializer, UserProfileImageSerializer, PasswordResetRequestSerializer, SetNewPasswordSerializer, LogoutSerializer
 from rest_framework.response import Response
 from rest_framework import status
 from .utils import send_code_to_user
@@ -19,6 +19,15 @@ class UserProfileImageView(UpdateAPIView):
 
     def get_object(self):
         return self.request.user
+    
+class UserProfileView(GenericAPIView):
+    serializer_class = UserProfileSerializer
+    permission_classes = [IsAuthenticated]
+
+    def get(self, request, *args, **kwargs):
+        user = request.user  # Assuming you want to retrieve the profile of the current authenticated user
+        serializer = self.get_serializer(user)
+        return Response(serializer.data)
 
 
 class RegisterUserView(GenericAPIView):
