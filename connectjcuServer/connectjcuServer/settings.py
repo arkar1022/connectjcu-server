@@ -62,12 +62,16 @@ ROOT_URLCONF = "connectjcuServer.urls"
 # CORS_URLS_REGEX = r"^/api/.*" 
 CORS_ALLOWED_ORIGINS = [
     'https://connectjcu-client.vercel.app',
+    'https://connectjcu.org',
+    'https://www.connectjcu.org',
     'http://localhost:3000',
     'https://localhost:3000',
 ]
 
 CSRF_TRUSTED_ORIGINS = [
     'https://connectjcu-client.vercel.app',
+    'https://connectjcu.org',
+    'https://www.connectjcu.org',
     'http://localhost:3000',
     'https://localhost:3000',
 ]
