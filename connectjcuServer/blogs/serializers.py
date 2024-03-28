@@ -2,11 +2,11 @@ from rest_framework import serializers
 from .models import Blog
 from categories.models import Category
 from api.serializers import UserPublicSerializer
-from categories.serializers import CategoryPublicSerializer
+from categories.serializers import CategoryRelatedFieldSerializer
 
 class BlogSerializer(serializers.ModelSerializer):
     author = UserPublicSerializer(source='user', read_only=True)
-    category = CategoryPublicSerializer()
+    category = CategoryRelatedFieldSerializer(queryset=Category.objects.all())
     class Meta:
         model = Blog
         fields = [

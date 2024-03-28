@@ -11,7 +11,9 @@ class BlogMixinListView(mixins.CreateModelMixin,mixins.ListModelMixin, generics.
     permission_classes = [IsAuthenticated]
 
     def perform_create(self, serializer):
-        serializer.save(user=self.request.user)
+        category_id = self.request.data.get('category')
+        category = Category.objects.get(id=category_id)
+        serializer.save(user=self.request.user, category=category)
 
     def get_queryset(self):
         queryset = super().get_queryset()
@@ -30,15 +32,6 @@ class BlogMixinListView(mixins.CreateModelMixin,mixins.ListModelMixin, generics.
         return self.list(request, *args, **kwargs)
     
     def post(self, request, *args, **kwargs):
-        data = request.data
-        category_id = data.get('category', None)
-        if category_id:
-            category = Category.objects.filter(id=category_id).first()
-            if category:
-                data['category'] = category.id
-            else:
-                del data['category']  # Remove category if not found
-
         return self.create(request, *args, **kwargs)
 
 
