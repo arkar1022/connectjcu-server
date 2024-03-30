@@ -1,7 +1,7 @@
 from django.contrib import admin
-from .models import Blog
+from .models import Resource
 # Register your models here.\
-class BlogAdmin(admin.ModelAdmin):
+class ResourceAdmin(admin.ModelAdmin):
     list_display = ('id', 'title', 'created_at', 'updated_at')
 
-admin.site.register(Blog, BlogAdmin)
+admin.site.register(Resource, ResourceAdmin)
