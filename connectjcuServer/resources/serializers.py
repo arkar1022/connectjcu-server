@@ -18,6 +18,7 @@ class ResourceSerializer(serializers.ModelSerializer):
             'file',
             'category',
             'author',
+            'article_author',
             'created_at',
             'updated_at',
         ]

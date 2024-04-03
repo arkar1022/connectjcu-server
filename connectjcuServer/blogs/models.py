@@ -2,7 +2,9 @@ from django.db import models
 from django.conf import settings
 from django.db.models import Q
 from categories.models import Category
+from django.contrib.contenttypes.models import ContentType
 
+# Replace 'YourModelName' with the actual model class you're interested i
 # Create your models here.
 class Blog(models.Model):
     title = models.CharField(max_length=120)
