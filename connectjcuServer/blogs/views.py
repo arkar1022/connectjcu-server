@@ -4,6 +4,7 @@ from rest_framework.permissions import IsAuthenticated
 from .models import Blog
 from categories.models import Category
 from .serializers import BlogSerializer
+from django.shortcuts import get_object_or_404
 
 class BlogMixinListView(mixins.CreateModelMixin,mixins.ListModelMixin, generics.GenericAPIView):
     queryset = Blog.objects.all()
@@ -56,7 +57,20 @@ class BlogMixinDetailView(mixins.RetrieveModelMixin, mixins.UpdateModelMixin, mi
         instance.save()
         return self.retrieve(request, *args, **kwargs)
     
+    def perform_update(self, serializer):
+        category_id = self.request.data.get('category')
+        if category_id:
+            # Get the Category instance based on the provided ID
+            category = get_object_or_404(Category, id=category_id)
+            serializer.save(category=category)
+        else:
+            # If no category ID is provided, just save the serializer without updating the category
+            serializer.save()
+    
     def post(self, request, *args, **kwargs):
+        return self.partial_update(request, *args, **kwargs)
+    
+    def put(self, request, *args, **kwargs):
         return self.partial_update(request, *args, **kwargs)
     
     def delete(self, request, *args, **kwargs):
