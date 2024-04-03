@@ -15,6 +15,16 @@ class BlogMixinListView(mixins.CreateModelMixin,mixins.ListModelMixin, generics.
         category = Category.objects.get(id=category_id)
         serializer.save(user=self.request.user, category=category)
 
+    def get_serializer_context(self):
+        """
+        Pass the request object to the serializer context.
+        """
+        context = super(BlogMixinListView, self).get_serializer_context()
+        context.update({
+            "request": self.request
+        })
+        return context
+
     def get_queryset(self):
         queryset = super().get_queryset()
         sort_by = self.request.query_params.get('sort')
@@ -51,4 +61,14 @@ class BlogMixinDetailView(mixins.RetrieveModelMixin, mixins.UpdateModelMixin, mi
     
     def delete(self, request, *args, **kwargs):
         return self.destroy(request, *args, **kwargs)
+
+    def get_serializer_context(self):
+        """
+        Pass the request object to the serializer context.
+        """
+        context = super(BlogMixinDetailView, self).get_serializer_context()
+        context.update({
+            "request": self.request
+        })
+        return context
 
