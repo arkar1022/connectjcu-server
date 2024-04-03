@@ -6,7 +6,7 @@
 * Total estimated amount of work: 51 days
 
 User stories or tasks (see chapter 4):
-1. [Login/ Signup](./user_stories/user_story_01_title.md), priority 10, 3 days
+1. [Login/ Signup](./user_stories/login_signup.md), priority 10, 3 days
 2. [View a blog](./user_stories/user_story_01_title.md), priority 10, 3 days
 3. [Post a blog](./user_stories/user_story_01_title.md), priority 10, 3 days
 4. [Edit a blog](./user_stories/user_story_01_title.md), priority 10, 3 days
