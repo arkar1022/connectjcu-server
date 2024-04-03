@@ -2,7 +2,7 @@
 
 Keep any other version here as well, e.g. Display current deals, Let user to click on "show-current-deals".
 
-## Priority: 10
+## Priority: 30
 
 ## Estimation: 3 days
 
