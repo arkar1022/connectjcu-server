@@ -4,7 +4,9 @@ from rest_framework.permissions import IsAuthenticated
 from .models import Blog
 from categories.models import Category
 from .serializers import BlogSerializer
+from django.db.models.functions import Concat
 from django.shortcuts import get_object_or_404
+from django.db.models import Q, Value
 
 class BlogMixinListView(mixins.CreateModelMixin,mixins.ListModelMixin, generics.GenericAPIView):
     queryset = Blog.objects.all()
@@ -29,6 +31,8 @@ class BlogMixinListView(mixins.CreateModelMixin,mixins.ListModelMixin, generics.
     def get_queryset(self):
         queryset = super().get_queryset()
         sort_by = self.request.query_params.get('sort')
+        search_term = self.request.query_params.get('search', None)
+        category_id = self.request.query_params.get('category', None)
 
         if sort_by:
             if sort_by.startswith('-'):
@@ -36,6 +40,16 @@ class BlogMixinListView(mixins.CreateModelMixin,mixins.ListModelMixin, generics.
                 queryset = queryset.order_by(F(field_name).desc())
             else:
                 queryset = queryset.order_by(sort_by)
+
+        if search_term:
+            # Annotate the queryset with a full_name field
+            queryset = queryset.annotate(full_name=Concat('user__first_name', Value(' '), 'user__last_name'))
+            # Filter the queryset for blogs with titles containing the search term or users whose full name contains the search term
+            queryset = queryset.filter(Q(title__icontains=search_term) | Q(full_name__icontains=search_term))
+        
+        if category_id:
+            # Filter the queryset for blogs that belong to the specified category
+            queryset = queryset.filter(category__id=category_id)
 
         return queryset
 
