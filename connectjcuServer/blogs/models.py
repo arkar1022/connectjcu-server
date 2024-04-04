@@ -4,8 +4,6 @@ from django.db.models import Q
 from categories.models import Category
 
 
-# Replace 'YourModelName' with the actual model class you're interested i
-# Create your models here.
 class Blog(models.Model):
     title = models.CharField(max_length=120)
     content = models.TextField(blank=True, null=True)
