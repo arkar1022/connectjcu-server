@@ -1,24 +1,20 @@
 from rest_framework import serializers
-from .models import Blog
+from .models import Qna
 from categories.models import Category
 from api.serializers import UserPublicSerializer
 from categories.serializers import CategoryRelatedFieldSerializer
-# from django.contrib.contenttypes.models import ContentType
-# content_type = ContentType.objects.get_for_model(Resource)
-# print(content_type.id)
 
-class BlogSerializer(serializers.ModelSerializer):
+class QnaSerializer(serializers.ModelSerializer):
     author = UserPublicSerializer(source='user', read_only=True)
     category = CategoryRelatedFieldSerializer(queryset=Category.objects.all())
     is_owner = serializers.SerializerMethodField(read_only=True)
     class Meta:
-        model = Blog
+        model = Qna
         fields = [
             'id',
             'title',
             'content',
             'view_count',
-            'image_file',
             'category',
             'author',
             'is_owner',

@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     "categories",
     "resources",
     "comments",
+    "qna"
   
 ]
 
