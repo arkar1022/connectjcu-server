@@ -38,5 +38,5 @@ Back-end:
 # Completed:
 - Edit the blog
   [Edit button author view ](../img/edit_blog_button_author_view.png)
-  [Edit button non-author view](../img/edir_blog_button_nonauthor_view.png)
+  [Edit button non-author view](../img/edit_blog_button_nonauthor_view.png)
   [Edit Blog page](../img/edit_blog_page.png)
