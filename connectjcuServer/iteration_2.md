@@ -22,19 +22,19 @@ User stories or tasks (see chapter 4):
 
 Completed:
 
-Task 1: Develop interface that allows users to modify their resources
-Task 2: Implement the logic to conditionally display the edit button only when the resources belongs to
-Task 3: Set up the necessary API endpoint to receive the edit resources data from the front-end
-Task 4: Create a function or module that updates the database with the new resources data
-Task 5: Design and develop the search functionality to allow users to search for resources by author or title
-Task 6: Implement the filtering and sorting features that allows users to filter or sort resources by category
-Task 7: Set up the necessary API endpoint to handle the search functionality by author or title
-Task 8: Implement the API endpoint for filtering and sorting resources by category. This includes defining the route and implementing the logic to retrieve and return the resources belonging to the selected category.
-Task 9: Add interface for Q&A section
-Task 10: Edit the create page to add a section for Q&A.
-Task 11: Display the user who asked the question and when it was asked.
-Task 12: Implement API endpoint to get Q&A information which are the user name, question and when it was published.
-Task 13: Make sure the API endpoint returns the necessary information to the page.
+- Task 1: Develop interface that allows users to modify their resources
+- Task 2: Implement the logic to conditionally display the edit button only when the resources belongs to
+- Task 3: Set up the necessary API endpoint to receive the edit resources data from the front-end
+- Task 4: Create a function or module that updates the database with the new resources data
+- Task 5: Design and develop the search functionality to allow users to search for resources by author or title
+- Task 6: Implement the filtering and sorting features that allows users to filter or sort resources by category
+- Task 7: Set up the necessary API endpoint to handle the search functionality by author or title
+- Task 8: Implement the API endpoint for filtering and sorting resources by category. This includes defining the route and implementing the logic to retrieve and return the resources belonging to the selected category.
+- Task 9: Add interface for Q&A section
+- Task 10: Edit the create page to add a section for Q&A.
+- Task 11: Display the user who asked the question and when it was asked.
+- Task 12: Implement API endpoint to get Q&A information which are the user name, question and when it was published.
+- Task 13: Make sure the API endpoint returns the necessary information to the page.
 
 ### Burn Down for iteration-2:
 
