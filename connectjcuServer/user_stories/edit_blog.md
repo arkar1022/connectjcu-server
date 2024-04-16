@@ -31,10 +31,7 @@ Back-end:
 4. Task 4: Create a function or module that updates the database with the new blog post data
 
 # UI Design:
-
-- Many user stories are connected to a User interface.
-- Insert a mockup design screenshot using any prototyping tools: https://encr.pw/IqRnn
-
+https://www.figma.com/file/TYFbOhu9clri5TgO0HumTi/Advanced-Software-Engineering?type=design&node-id=0-1&mode=design&t=GMw5uRkjENw06mmd-0
 # Completed:
 - Edit the blog
   [Edit button author view ](../img/edit_blog_button_author_view.png)

@@ -25,14 +25,16 @@ Front-end:
 
 1. Task 1: Develop the Post Blog component, which includes the user interface elements for choosing a topic, selecting a cover image, and entering blog content.
 2. Task 2: Research and integrate a suitable library or tool that enables users to modify and customize their blog content easily.
-   3 .Task 3: Implement the necessary API calls to send the blog data from the front-end to the back-end server.
+3 .Task 3: Implement the necessary API calls to send the blog data from the front-end to the back-end server.
 
-Back-end: 4. Task 4: Set up the server-side API endpoint to receive the blog data sent from the front-end. 5. Task 5: Create a function to process and save the received blog data to the database. 6. Task 6: Implement the necessary API endpoint to fetch the blog data from the database for display on the main blog page.
+Back-end:
+4. Task 4: Set up the server-side API endpoint to receive the blog data sent from the front-end. 
+5. Task 5: Create a function to process and save the received blog data to the database. 
+6. Task 6: Implement the necessary API endpoint to fetch the blog data from the database for display on the main blog page.
 
 # UI Design:
 
-- Many user stories are connected to a User interface.
-- Insert a mockup design screenshot using any prototyping tools: https://encr.pw/IqRnn
+https://www.figma.com/file/TYFbOhu9clri5TgO0HumTi/Advanced-Software-Engineering?type=design&node-id=0-1&mode=design&t=GMw5uRkjENw06mmd-0
 
 # Completed:
 

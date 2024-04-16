@@ -24,20 +24,19 @@
 
 1. [Modify posted resources](./user_stories/modify_posted_resources.md), priority 30, 2 days
 2. [Search/sort/filter resources](./user_stories/search_filter_resources.md), priority 30, 3 days
-3. [Comment section](./user_stories/user_story_01_title.md), priority 40, 3 days
-4. [Add Q&A section](./user_stories/user_story_01_title.md), priority 30, 5 days
+3. [Add Q&A section](./user_stories/user_story_01_title.md), priority 30, 5 days
+4. [Blog comment](./user_stories/download_resources.md), priority 30, 3 days
 5. [View other profile](./user_stories/user_story_01_title.md), priority 20, 3 days
-6. [Find related blog](./user_stories/user_story_01_title.md), priority 30, 3 days 
+6. [Find related blog](./user_stories/user_story_01_title.md), priority 30, 3 days
 
-Total: 20 days
+Total: 13 days
 
 ### Not enough time/developers:
 
-1. [user story title](./user_stories/user_story_01_title.md), priority XX, YY days
-2. ...
+1. View other profilep, riority 30, 3 days
+2. Find related blog, priority 30, 3 days
 
-
-Total: YY days
+Total: 6 days
 
 # Actual iterations
 

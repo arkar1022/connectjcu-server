@@ -11,9 +11,7 @@ Keep any other version here as well, e.g. Display current deals, Let user to cli
 - Arkar: 3 days
 
 ## Assumptions (if any):
-
 - None
-
 ## Description:
 
 With this feature, students gain convenient access to a wide range of study materials directly from our platform. Whether it's lecture notes, presentations, course handouts, or supplementary resources, our comprehensive collection ensures that students have all the necessary materials at their fingertips. With our "Download Study Materials" feature, JCU students can enhance their learning experience by having easy access to essential resources that support their academic journey
@@ -35,10 +33,7 @@ Task 4: Set up the server-side API endpoints to handle requests for retrieving s
 Task 5: Establish a secure file storage system to store and retrieve study resources.
 
 # UI Design:
-
-- Many user stories are connected to a User interface.
-- Insert a mockup design screenshot using any prototyping tools: https://encr.pw/IqRnn
-
+https://www.figma.com/file/TYFbOhu9clri5TgO0HumTi/Advanced-Software-Engineering?type=design&node-id=0-1&mode=design&t=GMw5uRkjENw06mmd-0
 # Completed:
 
 - View all resources
