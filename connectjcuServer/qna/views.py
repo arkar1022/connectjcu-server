@@ -33,6 +33,7 @@ class QnaMixinListView(mixins.CreateModelMixin,mixins.ListModelMixin, generics.G
         sort_by = self.request.query_params.get('sort')
         search_term = self.request.query_params.get('search', None)
         category_id = self.request.query_params.get('category', None)
+        user_id = self.request.query_params.get('user', None)
 
         if sort_by:
             if sort_by.startswith('-'):
@@ -50,6 +51,10 @@ class QnaMixinListView(mixins.CreateModelMixin,mixins.ListModelMixin, generics.G
         if category_id:
             # Filter the queryset for Qnas that belong to the specified category
             queryset = queryset.filter(category__id=category_id)
+
+        
+        if user_id:
+            queryset = queryset.filter(user__id=user_id)
 
         return queryset
 
