@@ -2,23 +2,23 @@
 
 Checklist:
 
-1. github entry timestamps
-2. User stories are correct: see p39
-
-- Assumed Velocity FROM iteration-1: 0.8
-- Number of developers: 3
-- Total estimated amount of work: 44 days
-
-User stories or tasks (see chapter 4):
+- Assumed Velocity FROM iteration-1: 1
+- Number of developers: 2
+- Total estimated amount of work: 17 days
+  User stories or tasks (see chapter 4):
 
 1. [Modify posted resources](./user_stories/modify_posted_resources.md), priority 30, 2 days
 2. [Search and filter resources](./user_stories/search_filter_resources.md), priority 40, 3 days
 3. [Add Q&A section](./user_stories/Q&A.md), priority 30, 5 days
-4. [Blog comment](./user_stories/download_resources.md), priority 30, 3 days
+4. [Blog comment](./user_stories/download_resources.md), priority 30, 3 day
+5. [View other profile], priority 20, 3 days
+6. [Find related blog], priority 30, 3 days
+
    In progress:
 
-- Task-2 (developer name or initials), date started
-- ...
+- Task 1: Related content
+- Task 2: like count
+- Task 3: View other users profile
 
 Completed:
 
@@ -40,7 +40,7 @@ Completed:
 
 Update this at least once per week
 
-- 2 weeks left, xx days
-- 1 weeks left, xx days
-- 0 weeks left, xx days
-- Actual Velocity: ??
+- 2 weeks left, 12 days
+- 1 weeks left, 8 days
+- 0 weeks left, 6 days
+- Actual Velocity: 0,64

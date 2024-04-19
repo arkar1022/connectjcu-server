@@ -1,8 +1,8 @@
 # Actual iteration-1 board (started day: 11/3/2024)
 
 - Assumed Velocity: 0.7
-- Number of developers: 1
-- Total estimated amount of work: 60 days
+- Number of developers: 2
+- Total estimated amount of work: 24,5 days
 
 User stories or tasks (see chapter 4):
 
@@ -11,9 +11,9 @@ User stories or tasks (see chapter 4):
 3. [Post a blog](./user_stories/post_a_blog.md), priority 10, 3 days
 4. [Edit a blog](./user_stories/edit_blog.md), priority 10, 3 days
 5. [View user profile](./user_stories/view_user_profile.md), priority 20, 3 days
-6. [Download the material/result](./user_stories/download_resources.md), priority 30, 3 days
-7. [User Upload resources](./user_stories/upload_resources.md), priority 30, 3 days
-8. [Search blog (title)](./user_stories/search_filter_blog.md), priority 30, 4 days
+6. [User Upload resources](./user_stories/upload_resources.md), priority 30, 3 days
+7. [Download the material/result](./user_stories/download_resources.md), priority 30, 3 days
+8. [Search/filter/sort blog ](./user_stories/search_filter_blog.md), priority 30, 4 days
 
 In progress:
 none
@@ -62,7 +62,7 @@ Completed:
 
 Update this at least once per week
 
-- 2 weeks left, xx days of estimated amount of work
-- 1 weeks left, xx days
-- 0 weeks left, xx days
-- Actual Velocity: ??
+- 2 weeks left, 13 days of estimated amount of work
+- 1 weeks left, 4 days
+- 0 weeks left, 0 days
+- Actual Velocity: 1
