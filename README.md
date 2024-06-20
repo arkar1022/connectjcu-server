@@ -12,9 +12,9 @@ This is a community platform designed exclusively for James Cook University stud
 
 ## Team
 
-1. Dao Ngoc Tuan - 14399066
-2. Ar Kar - 14377336
-3. Andre Jonathan - 14329484
+1. Ar Kar - 14377336 (Full Stack Developer)
+2. Dao Ngoc Tuan - 14399066 (Reporter)
+3. Andre Jonathan - 14329484 (Reporter)
 
 # _General_ project planning BEFORE iteration-1
 
