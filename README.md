@@ -10,6 +10,10 @@ This is a community platform designed exclusively for James Cook University stud
 - Database: We used the MySQL DB from : https://aiven.io/
  ServiceURI: mysql://avnadmin:AVNS_bZZ2XAbxxPyN1wWFr0q@connectjcu-db-arkar1022-d06f.a.aivencloud.com:12662/defaultdb?ssl-mode=REQUIRED
 
+## Important! (30 Jun 2024)
+Frontend Site (hosting on vercel) will be not working properly anymore since I have terminated backend server.
+But you can try it on your local. #ArKar
+
 ## Team
 
 1. Ar Kar - 14377336 (Full Stack Developer)
