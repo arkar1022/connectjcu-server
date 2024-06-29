@@ -3,7 +3,7 @@
 This is a community platform designed exclusively for James Cook University students. Here, students can come together to connect, share, and engage in meaningful discussions. Whether you're looking to share your experiences through blogs, discover insightful articles and resources, or seek answers to burning questions, connectJCU has you covered. Our platform offers a diverse range of features, including a blog section where students can showcase their stories and insights, a repository of articles and resources for academic and personal growth, and a dedicated Q&A section where students can seek advice and support from their peers.
 
 - Website: https://www.connectjcu.org/
-- Admin page: https://connectjcu.club/admin
+- Admin page: https://connectjcu.club/admin (Hosting have been terminated due to budget, not working anymore)
 - Github:
 - Front- end:https://github.com/arkar1022/connectjcu-client/tree/main
 - Back- end: https://github.com/arkar1022/connectjcu-server
